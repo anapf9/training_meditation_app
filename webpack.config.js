@@ -18,7 +18,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: PATHS.build
+    contentBase: PATHS.src
   },
   module: {
     rules: [
@@ -40,6 +40,10 @@ module.exports = {
       {
         test: /\.(jpg|png|svg)$/,
         use: { loader: 'url-loader' }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
     ]
   },

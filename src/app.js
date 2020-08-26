@@ -21,7 +21,7 @@ const app = () => {
     checkPlaying(song)
   })
 
-  //Select Sound
+  //Select Time
   timeSelect.forEach(option => {
     option.addEventListener('click', function () {
       fakeDuration = this.getAttribute('data-time')
@@ -53,6 +53,14 @@ const app = () => {
     outline.style.strokeDashoffset = progress
     // animate text
     timeDisplay.textContent = `${minutes}:${seconds}`
+
+    // we don't want negative numbers
+    if (currentTime >= fakeDuration) {
+      song.pause()
+      song.currentTime = 0
+      play.src = './../svg/play.svg'
+      video.pause()
+    }
   }
 }
 

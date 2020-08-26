@@ -1,0 +1,23 @@
+{
+  "name": "meditation_app",
+  "version": "1.0.0",
+  "description": "training css, html and javascript",
+  "main": "index.js",
+  "repository": "https://github.com/anapf9/training_meditation_app.git",
+  "author": "Ana <ana.eng.dev@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js --watch",
+    "start": "webpack-dev-server --config ./webpack.config.js --env development"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.9",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.20.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {}
+}
